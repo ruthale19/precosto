@@ -28,3 +28,10 @@ footer ul {
 .fas {
   padding-right: 20px;
 }
+
+@media (max-width: 768px) {
+
+  footer ul {
+    padding-top: 0;
+  }
+}
