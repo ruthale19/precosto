@@ -7,3 +7,15 @@ header {
 .header__img {
   height: 400px;
 }
+
+.header__text1 {
+  font-size: $large;
+  padding-bottom: 2em;
+  color: $blue-main;
+  animation: logo 4s;
+}
+
+
+@keyframes logo {
+  0% { opacity: 0; }
+}
