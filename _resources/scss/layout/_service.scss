@@ -1,0 +1,56 @@
+/* layout service */
+
+.container {
+  padding: 7em 0.5em 3em 1em;
+  text-align: center;
+}
+
+.service {
+
+  &__text1 {
+    font-size: $x-large;
+  }
+
+  &__text2 {
+    font-size: $large;
+    padding-bottom: 2em;
+    color: $blue-main;
+    animation: logo 4s;
+  }
+
+  &__img {
+    padding-top: 1em;
+    width: 5em;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  @keyframes logo {
+    0% { opacity: 0; }
+  }
+
+  &__btn {
+    color: $white;
+    background-color: $blue-main;
+    border-color: $blue-main;
+    border-radius: 50px;
+  }
+
+  &__btn:hover {
+    color: $white;
+    background-color: $gray-main;
+  }
+}
+
+
+
+/* 48em = 768px */
+
+@media (min-width: 768px) {
+  .service {
+
+    &__text1 {
+      font-size: $xx-large;
+    }
+  }
+}
