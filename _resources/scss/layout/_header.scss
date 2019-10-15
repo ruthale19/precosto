@@ -4,13 +4,26 @@ header {
   padding-top: 80px;
 }
 
+.header__container {
+  background-color: $platinum;
+  padding-bottom: 2rem;
+}
+
 .header__img {
   height: 400px;
 }
 
+.header__logo {
+  padding: 2rem 0;
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  animation: logo 4s;
+}
+
 .header__text1 {
+  text-align: center;
   font-size: $large;
-  padding-bottom: 2em;
   color: $blue-main;
   animation: logo 4s;
 }
