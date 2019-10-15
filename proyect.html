@@ -32,7 +32,7 @@
 
 
 
-  <!-- header -->
+	<!-- header -->
 	<header class="header d-none d-lg-block">
 		<div class="header__container">
 			<img src="assets/images/logo_edificio.png" alt="logo_edificio" class="text-center header__logo">
@@ -44,79 +44,91 @@
 	<section class="proyect" id="proyects">
 		<div class="container proyect__container2">
 			<h1 class="proyect__text1">Nuestros Proyectos</h1>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-xs-12">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-12 mt-3">
+					<button type="button" class="btn btn-outline-info mx-2 waves-effect filter" data-rel="all">Todos</button>
+					<button type="button" class="btn btn-outline-info mx-2 waves-effect filter" data-rel="1">Construcción</button>
+					<button type="button" class="btn btn-outline-info mx-2 waves-effect filter" data-rel="2">Remodelación</button>
+				</div>
+				<div class="col-md-12 mt-3 mb-5">
+					<button type="button" class="btn btn-outline-info mx-2 waves-effect filter" data-rel="3">Mantenimiento</button>
+					<button type="button" class="btn btn-outline-info mx-2 waves-effect filter" data-rel="4">Estructuras Metálicas</button>
+				</div>
+			</div>
+
+			<div class="row gallery" id="gallery">
+				<div class="col-lg-4 col-md-6 col-xs-12  pics animation all 2">
 					<div class="proyect__block wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.15s">
 						<div class="proyect__works-thumb" id="work-1"></div>
 						<div class="proyect__works-caption">Remodelación</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="proyect__block wow animated rotateInDownLeft" data-wow-duration=".8s" data-wow-delay="0.3s">
+					<div class="proyect__block wow animated rotateInDownLeft all 1" data-wow-duration=".8s" data-wow-delay="0.3s">
 						<div class="proyect__works-thumb" id="work-2"></div>
 						<div class="proyect__works-caption">Construcción</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="proyect__block wow animated rotateInDownLeft" data-wow-duration=".8s" data-wow-delay="0.45s">
+					<div class="proyect__block wow animated rotateInDownLeft all 3" data-wow-duration=".8s" data-wow-delay="0.45s">
 						<div class="proyect__works-thumb" id="work-3"></div>
 						<div class="proyect__works-caption">Mantenimiento</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.6s">
+					<div class="proyect__block wow animated rotateInDownRight all 4" data-wow-duration=".8s" data-wow-delay="0.6s">
 						<div class="proyect__works-thumb" id="work-4"></div>
 						<div class="proyect__works-caption">Estructura Metálica</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.75s">
+					<div class="proyect__block wow animated rotateInDownRight all 2" data-wow-duration=".8s" data-wow-delay="0.75s">
 						<div class="proyect__works-thumb" id="work-5"></div>
 						<div class="proyect__works-caption">Remodelación</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.9s">
+					<div class="proyect__block wow animated rotateInDownRight all 1" data-wow-duration=".8s" data-wow-delay="0.9s">
 						<div class="proyect__works-thumb" id="work-6"></div>
 						<div class="proyect__works-caption">Construcción</div>
 					</div>
 				</div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.15s">
-            <div class="proyect__works-thumb" id="work-1"></div>
-            <div class="proyect__works-caption">Remodelación</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownLeft" data-wow-duration=".8s" data-wow-delay="0.3s">
-            <div class="proyect__works-thumb" id="work-2"></div>
-            <div class="proyect__works-caption">Construcción</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownLeft" data-wow-duration=".8s" data-wow-delay="0.45s">
-            <div class="proyect__works-thumb" id="work-3"></div>
-            <div class="proyect__works-caption">Mantenimiento</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.6s">
-            <div class="proyect__works-thumb" id="work-4"></div>
-            <div class="proyect__works-caption">Estructura Metálica</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.75s">
-            <div class="proyect__works-thumb" id="work-5"></div>
-            <div class="proyect__works-caption">Remodelación</div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12">
-          <div class="proyect__block wow animated rotateInDownRight" data-wow-duration=".8s" data-wow-delay="0.9s">
-            <div class="proyect__works-thumb" id="work-6"></div>
-            <div class="proyect__works-caption">Construcción</div>
-          </div>
-        </div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownLeft all 2" data-wow-duration="1s" data-wow-delay="0.15s">
+						<div class="proyect__works-thumb" id="work-1"></div>
+						<div class="proyect__works-caption">Remodelación</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownLeft all 1" data-wow-duration=".8s" data-wow-delay="0.3s">
+						<div class="proyect__works-thumb" id="work-2"></div>
+						<div class="proyect__works-caption">Construcción</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownLeft all 3" data-wow-duration=".8s" data-wow-delay="0.45s">
+						<div class="proyect__works-thumb" id="work-3"></div>
+						<div class="proyect__works-caption">Mantenimiento</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownRight all 4" data-wow-duration=".8s" data-wow-delay="0.6s">
+						<div class="proyect__works-thumb" id="work-4"></div>
+						<div class="proyect__works-caption">Estructura Metálica</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownRight all 2" data-wow-duration=".8s" data-wow-delay="0.75s">
+						<div class="proyect__works-thumb" id="work-5"></div>
+						<div class="proyect__works-caption">Remodelación</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="proyect__block wow animated rotateInDownRight all 1" data-wow-duration=".8s" data-wow-delay="0.9s">
+						<div class="proyect__works-thumb" id="work-6"></div>
+						<div class="proyect__works-caption">Construcción</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -143,7 +155,9 @@
 				</div>
 
 				<div class="footer__menu col-md-6 col-xs-12">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.151890724232!2d-70.60634768480153!3d-33.41928418078278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf69817aa7eb%3A0x516fb26d6787f6c0!2sAv.%20Providencia%202501%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1571152090524!5m2!1ses-419!2scl" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.151890724232!2d-70.60634768480153!3d-33.41928418078278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf69817aa7eb%3A0x516fb26d6787f6c0!2sAv.%20Providencia%202501%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1571152090524!5m2!1ses-419!2scl"
+						width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 				</div>
 
 			</div>
@@ -167,7 +181,9 @@
 	<!-- this is where we put our custom functions -->
 	<script src="assets/scripts/main.bundle.js"></script>
 	<script src="assets/scripts/WOW.js"></script>
-	<script>new WOW().init();</script>
+	<script>
+		new WOW().init();
+	</script>
 
 
 </body>

@@ -1,53 +1,47 @@
-
-
-.form {
-  max-width: 70%;
-  margin-left: 20%;
-  margin-right: 10%;
-  margin-top: 3em;
-
-  &__text1 {
-    color: $black;
-    font-family: $orbitron;
-    font-weight: $black;
-    font-size: $x-large;
-    margin: 2em 0 0 0;
-  }
-
-  &__text2 {
-    line-height: 1.5em;
-    color: $gray-main;
-    margin: 2em 0;
-  }
+#contact .section-heading {
+  margin: 0 0 2em;
 }
 
-label {
-
-
-    font-size: $x-large;
-    display:block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: $black;
-  //  letter-spacing:1px;
+#contact #message {
+  min-height: 148px;
+  height: auto;
 }
 
+.contact {
+  margin-bottom: 50px;
 
-
-input, textarea {
-    margin-top: 0;
-    width: 100%;
-    height:27px;
-    background: $white;
-    border:1px solid $gray-main;
-    border-radius: 10px;
-    padding: 1em;
-
-    font-size: $large;
-    color: $gray-main;
 }
 
-textarea {
-    height: 10em;
-    margin-bottom: 10em;
+.contact__card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+    border-color: $blue-main;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $blue-dark;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $blue-dark;
+}
+
+.contact__btn {
+    color: $white;
+    background-color: $blue-main;
+    border-color: $blue-main;
+    border-radius: 50px;
+}
+
+.contact__btn:hover {
+  color: $white;
+  background-color: $gray-main;
 }
