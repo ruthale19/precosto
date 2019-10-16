@@ -22,10 +22,8 @@
   }
 
   &__btn {
+    @include botones;
     color: $white;
-    background-color: $blue-main;
-    border-color: $blue-main;
-    border-radius: 50px;
     padding: 0.3rem 3rem;
   }
 

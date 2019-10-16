@@ -22,10 +22,8 @@
 
 
   &__btn {
+    @include botones;
     color: $white;
-    background-color: $blue-main;
-    border-color: $blue-main;
-    border-radius: 50px;
   }
 
   &__btn:hover {
@@ -45,4 +43,19 @@
       font-size: $xx-large;
     }
   }
+}
+
+
+.btn-color {
+  @include botones;
+}
+
+.btn-color:hover {
+  color: $white;
+  background-color: $gray-main;
+  border-color: $gray-main;
+}
+
+.icolor {
+  color: $black;
 }

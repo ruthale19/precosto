@@ -19,26 +19,20 @@
     margin: 0 auto 25px;
     margin-top: 50px;
     /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
     border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .form-control:focus {
     border-color: $blue-main;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $blue-dark;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $blue-dark;
 }
 
 .contact__btn {
+    @include botones;
     color: $white;
-    background-color: $blue-main;
-    border-color: $blue-main;
-    border-radius: 50px;
+
 }
 
 .contact__btn:hover {
