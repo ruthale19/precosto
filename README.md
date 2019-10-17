@@ -33,4 +33,4 @@
 
 - Guía de estilo:
 
-![](images/guia.png)
+![](img/guia.png)
