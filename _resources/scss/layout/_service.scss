@@ -12,6 +12,10 @@
     padding-bottom: 2em;
   }
 
+  &__text2 {
+    text-align: justify;
+  }
+
 
   &__img {
     padding-top: 1em;
@@ -29,7 +33,9 @@
   &__btn:hover {
     color: $white;
     background-color: $gray-main;
+    border-color: $gray-main;
   }
+
 }
 
 

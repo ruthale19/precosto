@@ -1,4 +1,3 @@
-
 //smooth scroll
 $(function(){
 
@@ -34,3 +33,6 @@ $(function() {
     }, 300);
   });
 });
+
+
+//Animación de elementos
