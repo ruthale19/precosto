@@ -1,5 +1,19 @@
 @mixin botones {
+  -webkit-background-color: $blue-main;
+  -moz-background-color: $blue-main;
+  -ms-background-color: $blue-main;
+  -o-background-color: $blue-main;
   background-color: $blue-main;
+
+  -webkit-border-color: $blue-main;
+  -moz-border-color: $blue-main;
+  -ms-border-color: $blue-main;
+  -o-border-color: $blue-main;
   border-color: $blue-main;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
   border-radius: 50px;
 }
