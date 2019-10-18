@@ -38,6 +38,15 @@
 
 }
 
+.btn-color {
+  @include botones;
+}
+
+.btn-color:hover {
+  color: $white;
+  background-color: $gray-main;
+  border-color: $gray-main;
+}
 
 
 /* 48em = 768px */
@@ -49,19 +58,4 @@
       font-size: $xx-large;
     }
   }
-}
-
-
-.btn-color {
-  @include botones;
-}
-
-.btn-color:hover {
-  color: $white;
-  background-color: $gray-main;
-  border-color: $gray-main;
-}
-
-.icolor {
-  color: $black;
 }

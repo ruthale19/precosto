@@ -12,13 +12,12 @@
 }
 
 .proyect {
-
   padding-bottom: 3%;
   background: $platinum;
 
   &__text1 {
     font-size: $xx-large;
-    padding-bottom: 2em;
+    padding: 3rem 0;
   }
 
   &__btn {
@@ -185,35 +184,18 @@
 }
 
 
-// .gallery {
-//   column-count: 3;
-//   column-width: 33%;
-// }
-//
-//
-// .gallery .pics {
-//   transition: all 350ms ease;
-// }
-//
-//
-// .gallery .animation {
-//   transform: scale(1);
-// }
+.gallery {
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+	display: flex;;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
 
-// @media (max-width: 450px) {
-//   .gallery {
-//     column-count: 1;
-//     column-width: 100%;
-//   }
-// }
-
-/*@media (max-width: 400px) {
-  .btn.filter {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-  }
-}*/
-
+.gallery__img {
+  transition: all 350ms ease;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -228,11 +210,3 @@
         margin: 20px auto;
     }
 }
-
-
-// @media (max-width: 400px) {
-//   .btn.filter {
-//     padding-left: 1.1rem;
-//     padding-right: 1.1rem;
-//   }
-// }

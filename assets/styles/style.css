@@ -4,7 +4,7 @@
   *
   * Esta es la estructura del patrón 7-1 utilizado en DesafíoLatam
   * para la enseñanza del uso correcto de patrones dentro de CSS y
-  * también para la utilización de éste dentro de estructuras de
+  * también para la utilización de éste dentro de estructuras de 
   * trabajo colaborativo.
   *
   * @author Cristóbal Domínguez <cristobald@me.com>
@@ -16,7 +16,7 @@
  * La mayoría de los proyectos tienen una carpeta vendors/ que contiene
  * todos los archivos CSS de librerías externas y frameworks – Normalize,
  * Bootstrap, jQuery, jQueryUI, Flickity, Flexslider y así sucesivamente.
- * Agregando estos en una carpeta aparte podría ser una buena forma de
+ * Agregando estos en una carpeta aparte podría ser una buena forma de 
  * decir: “Hey, esto no es mío, no es mi código, no es mi responsabilidad”.
  *
  * @author Cristóbal Domínguez <cristobald@me.com>
@@ -46,6 +46,15 @@
  * @since 1.0
  *
  */
+/*abstracts variables*/
+/* abstract mixins*/
+/*abstracts - placeholders*/
+.header__container {
+  background-color: #E6E7E7;
+  color: #057EB3;
+  text-align: center;
+}
+
 /*
  *
  * Este archivo contiene las referencias del código boilerplate de tu proyecto.
@@ -63,15 +72,32 @@
  * @since 1.0
  *
  */
+/* base reset*/
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* base typography*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Orbitron", sans-serif;
+}
+
 /*
  *
- * En sitios/aplicaciones grandes es usual tener distintos temas o
+ * En sitios/aplicaciones grandes es usual tener distintos temas o 
  * themes implementados. Hay diferentes caminos para lidiar con ese
  * problema, sin embargo uno de los más sencillos, a mi parecer, sería
  * tener cada theme dentro de su carpeta.
- *
+ * 
  * Nota:
- * La creación de esta carpeta es muy específica a cada proyecto,
+ * La creación de esta carpeta es muy específica a cada proyecto, 
  * probablemente la mayoría de los sitio/aplicaciones no la necesitarán.
  *
  * @author Cristóbal Domínguez <cristobald@me.com>
@@ -93,16 +119,643 @@
  * @since 1.0
  *
  */
+/* navigation */
+a {
+  color: #FFF;
+}
+
+.navigation {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 4px solid #057EB3;
+}
+.navigation__img {
+  height: 60px;
+}
+
+.menu {
+  padding-top: 5px;
+}
+
+.navigation ul {
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: 900;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  border-right: 1px solid 900;
+  text-decoration: none;
+  transition: all 500ms ease;
+}
+
+.navigation li a:hover,
+.navigation .menu-btn:hover {
+  color: #FFF;
+  background-color: #057EB3;
+  border-radius: 50px;
+}
+
+.navigation .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+.navigation .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+.navigation .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+  padding: 20px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.navigation .menu-icon .navicon {
+  background: #FFF;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.navigation .menu-icon .navicon:before,
+.navigation .menu-icon .navicon:after {
+  background: #FFF;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.navigation .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.navigation .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.navigation .menu-btn {
+  display: none;
+}
+
+.navigation .menu-btn:checked ~ .menu {
+  max-height: 300px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+@media (min-width: 768px) {
+  .navigation li {
+    float: left;
+  }
+
+  .navigation li a {
+    padding: 10px 20px;
+  }
+
+  .navigation .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .navigation .menu-icon {
+    display: none;
+  }
+
+  .navigation ul {
+    margin-top: 15px;
+  }
+
+  .navigation__img {
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .navigation__img {
+    padding-left: 100px;
+  }
+
+  .navigation li a {
+    padding: 10px 30px;
+  }
+}
+/* layout header*/
+header {
+  padding-top: 80px;
+}
+
+.header__container {
+  padding-bottom: 2rem;
+}
+
+.header__img {
+  height: 400px;
+}
+
+.header__logo {
+  padding: 2rem 0;
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  animation: logo 4s;
+}
+
+.header__text1 {
+  font-size: 20px;
+  animation: logo 4s;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+}
+.header__single {
+  padding-top: 0;
+}
+
+/* layout footer */
+footer {
+  background-color: #057EB3;
+  padding: 3em 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer__text1 {
+  margin-bottom: 20px;
+}
+
+.footer__container {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+footer ul {
+  list-style: none;
+  line-height: 50px;
+  text-align: justify;
+  font-size: 16px;
+  padding-top: 80px;
+}
+
+.footer__fas {
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    padding-top: 0;
+  }
+}
+/* layout service */
+.service__container {
+  padding: 7em 0.5em 3em 1em;
+  text-align: center;
+}
+
+.service__text1 {
+  font-size: 25px;
+  padding-bottom: 2em;
+}
+.service__text2 {
+  text-align: justify;
+}
+.service__img {
+  padding-top: 1em;
+  width: 5em;
+  display: flex;
+  margin: 0 auto;
+}
+.service__btn {
+  -webkit-background-color: #057EB3;
+  -moz-background-color: #057EB3;
+  -ms-background-color: #057EB3;
+  -o-background-color: #057EB3;
+  background-color: #057EB3;
+  -webkit-border-color: #057EB3;
+  -moz-border-color: #057EB3;
+  -ms-border-color: #057EB3;
+  -o-border-color: #057EB3;
+  border-color: #057EB3;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  color: #FFF;
+}
+.service__btn:hover {
+  color: #FFF;
+  background-color: #58595b;
+  border-color: #58595b;
+}
+
+.btn-color {
+  -webkit-background-color: #057EB3;
+  -moz-background-color: #057EB3;
+  -ms-background-color: #057EB3;
+  -o-background-color: #057EB3;
+  background-color: #057EB3;
+  -webkit-border-color: #057EB3;
+  -moz-border-color: #057EB3;
+  -ms-border-color: #057EB3;
+  -o-border-color: #057EB3;
+  border-color: #057EB3;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.btn-color:hover {
+  color: #FFF;
+  background-color: #58595b;
+  border-color: #58595b;
+}
+
+/* 48em = 768px */
+@media (min-width: 768px) {
+  .service__text1 {
+    font-size: 35px;
+  }
+}
+/* layout proyect */
+.proyect__container {
+  padding: 7em 0.5em 3em 1em;
+  text-align: center;
+}
+
+.proyect__container2 {
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.proyect {
+  padding-bottom: 3%;
+  background: #E6E7E7;
+}
+.proyect__text1 {
+  font-size: 35px;
+  padding: 3rem 0;
+}
+.proyect__btn {
+  -webkit-background-color: #057EB3;
+  -moz-background-color: #057EB3;
+  -ms-background-color: #057EB3;
+  -o-background-color: #057EB3;
+  background-color: #057EB3;
+  -webkit-border-color: #057EB3;
+  -moz-border-color: #057EB3;
+  -ms-border-color: #057EB3;
+  -o-border-color: #057EB3;
+  border-color: #057EB3;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  color: #FFF;
+  padding: 0.3rem 3rem;
+}
+.proyect__btn:hover {
+  color: #FFF;
+  background-color: #58595b;
+}
+.proyect__block {
+  box-shadow: 4px 4px 7px #333;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10%;
+}
+.proyect__works-thumb {
+  height: 200px;
+}
+.proyect__block::after, .proyect__block::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+.proyect__block::after {
+  left: -50%;
+  transition: 0.5s;
+}
+.proyect__block::before {
+  right: -50%;
+  transition: 0.5s;
+}
+.proyect__block:hover:after {
+  left: 0;
+}
+.proyect__block:hover:before {
+  right: 0;
+}
+.proyect__works-caption {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  position: absolute;
+  border-radius: 10px;
+  display: block;
+  padding: 15px 2px;
+  width: 60%;
+  left: 20%;
+  top: -40%;
+  z-index: 1;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: top 0.5s;
+}
+.proyect__block:hover .proyect__works-caption {
+  top: 33%;
+}
+
+#work-1 {
+  background: url("../images/proy1.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-2 {
+  background: url("../images/proy2.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-3 {
+  background: url("../images/proy3.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-4 {
+  background: url("../images/proy4.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-5 {
+  background: url("../images/proy5.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-6 {
+  background: url("../images/proy6.jpeg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-7 {
+  background: url("../images/proy7.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-8 {
+  background: url("../images/proy8.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-9 {
+  background: url("../images/proy9.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-10 {
+  background: url("../images/proy10.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-11 {
+  background: url("../images/proy11.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-12 {
+  background: url("../images/proy12.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-13 {
+  background: url("../images/proy13.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-14 {
+  background: url("../images/proy14.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-15 {
+  background: url("../images/proy15.jpeg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-16 {
+  background: url("../images/proy16.jpeg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-17 {
+  background: url("../images/proy17.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-18 {
+  background: url("../images/proy18.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-19 {
+  background: url("../images/proy19.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-20 {
+  background: url("../images/proy20.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+#work-21 {
+  background: url("../images/proy21.jpg") no-repeat 100%;
+  background-size: cover;
+}
+
+.proyect h2 {
+  margin: 7% 0;
+}
+
+.gallery {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.gallery__img {
+  transition: all 350ms ease;
+}
+
+@media screen and (max-width: 767px) {
+  .proyect__text1 {
+    font-size: 25px;
+  }
+
+  .block {
+    width: 65%;
+    margin: 20px auto;
+  }
+}
+/* layout us */
+.us__text1 {
+  font-size: 25px;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.us_text2 {
+  line-height: 50px;
+}
+
+.us__container {
+  text-align: justify;
+}
+
+.us__card {
+  margin: 50px 0;
+}
+
+.us__title {
+  padding: 2rem 0;
+  text-align: center;
+  border: 3px solid #057EB3;
+}
+
+.us__body {
+  border: 3px solid #057EB3;
+}
+
+/* 48em = 768px */
+@media (min-width: 768px) {
+  .us__text1 {
+    font-size: 35px;
+  }
+}
+/* layout contact */
+.contact__text1 {
+  font-size: 25px;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+#contact .section-heading {
+  margin: 0 0 2em;
+}
+
+#contact #message {
+  min-height: 148px;
+  height: auto;
+}
+
+.contact {
+  margin-bottom: 50px;
+}
+
+.contact__card {
+  background-color: #F7F7F7;
+  /* just in case there no content*/
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  /* shadows and rounded borders */
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+  border-color: #057EB3;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #1C4457;
+}
+
+.contact__btn {
+  -webkit-background-color: #057EB3;
+  -moz-background-color: #057EB3;
+  -ms-background-color: #057EB3;
+  -o-background-color: #057EB3;
+  background-color: #057EB3;
+  -webkit-border-color: #057EB3;
+  -moz-border-color: #057EB3;
+  -ms-border-color: #057EB3;
+  -o-border-color: #057EB3;
+  border-color: #057EB3;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  color: #FFF;
+}
+
+.contact__btn:hover {
+  color: #FFF;
+  background-color: #58595b;
+}
+
 /*
- *
- * Esta carpeta fue creada para componentes o módulos pequeños como por ejemplo:
+ * 
+ * Esta carpeta fue creada para componentes o módulos pequeños como por ejemplo: 
  * sliders, loaders, widgets, etc. A diferencia de la carpeta layout/ donde almacenaremos
  * los componentes que definan el wireframe del sitio/aplicación, aquí encontraremos
  * componentes que aportarán más contenido que una estructura visual.
- *
+ * 
  * Usualmente deberían haber muchos archivos en components/ debido a que los 
  * sitios/aplicaciones se empezaron a crear en base a pequeños módulos de código.
- *
+ * 
  * Nota:
  * Esta carpeta también se podría llamar modules/, dependiendo de cómo tu la prefieras.
  *
@@ -115,7 +768,7 @@
  * Si prefieres estilos de páginas específicas, es mejor ponerlos en la carpeta pages/.
  * Por cierto, es común tener estilos muy específicos para cada página, como por ejemplo:
  * home, de ahí la necesidad de crear un archivo _home.scss dentro de pages/.
- *
+ * 
  * Nota:
  * Dependiendo del proceso de tu desarrollo, estos archivos podrían ser cargados de forma
  * paralela al archivo de estilos principal, evitando juntarlos con los del estilo principal.
@@ -125,3 +778,5 @@
  * @since 1.0
  *
  */
+
+/*# sourceMappingURL=style.css.map */

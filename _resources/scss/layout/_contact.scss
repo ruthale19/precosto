@@ -1,3 +1,4 @@
+/* layout contact */
 
 .contact {
 
@@ -6,4 +7,46 @@
     padding-bottom: 2em;
     text-align: center;
   }
+}
+
+#contact .section-heading {
+  margin: 0 0 2em;
+}
+
+#contact #message {
+  min-height: 148px;
+  height: auto;
+}
+
+.contact {
+  margin-bottom: 50px;
+
+}
+
+.contact__card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+    border-color: $blue-main;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px $blue-dark;
+}
+
+.contact__btn {
+    @include botones;
+    color: $white;
+
+}
+
+.contact__btn:hover {
+  color: $white;
+  background-color: $gray-main;
 }

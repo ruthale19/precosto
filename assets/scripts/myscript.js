@@ -21,18 +21,24 @@ $(function(){
 
 
 //Filtro
-$(function() {
-  var selectedClass = "";
-  $(".filter").click(function(){
-    selectedClass = $(this).attr("data-rel");
-    $("#gallery").fadeTo(100, 0.1);
-    $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-    setTimeout(function() {
-      $("."+selectedClass).fadeIn().addClass('animation');
-      $("#gallery").fadeTo(300, 1);
-    }, 300);
-  });
-});
+(function(){
+	$(document).ready(function(){
+		$(".btn-menu").click(function(e){
+			e.preventDefault();
+			var filtro = $(this).attr("data-filter");
 
+			if (filtro == "all") {
+				$(".gallery__img").show(500);
+			} else {
+				$(".gallery__img").not("."+filtro).hide(500);
+				$(".gallery__img").filter("."+filtro).show(500);
+			}
+		});
+
+		$("button").click(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+	});
+}())
 
 //Animación de elementos

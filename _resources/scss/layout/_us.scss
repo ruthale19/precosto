@@ -1,7 +1,9 @@
+/* layout us */
 
 .us__text1 {
+  font-size: $x-large;
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .us_text2 {
@@ -24,4 +26,15 @@
 
 .us__body {
     border: 3px solid $blue-main;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 768px) {
+  .us {
+
+    &__text1 {
+      font-size: $xx-large;
+    }
+  }
 }
